@@ -7,12 +7,25 @@ namespace SnakeTheClassicGameOnMVVM
     {
         #region Fields
 
+        private readonly Timer _timer;
         public event Action OnNewRoundEvent;
 
         #endregion
 
 
         #region ClassLifeCycles
+
+        public RoundExecuteViewModel(float interval)
+        {
+            _timer = new Timer(0.0f, interval);
+            _timer.OnTickTimerEvent += OnTimerTick;
+        }
+
+        ~RoundExecuteViewModel()
+        {
+            _timer.OnTickTimerEvent -= OnTimerTick;
+        }
+
         #endregion
 
 
@@ -20,7 +33,12 @@ namespace SnakeTheClassicGameOnMVVM
 
         public void Execute(float deltaTime)
         {
-            throw new NotImplementedException();
+            _timer.StartTick(deltaTime);
+        }
+
+        private void OnTimerTick()
+        {
+            OnNewRoundEvent?.Invoke();
         }
 
         #endregion
