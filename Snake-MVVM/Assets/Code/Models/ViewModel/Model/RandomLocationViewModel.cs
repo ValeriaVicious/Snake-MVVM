@@ -3,7 +3,7 @@
 
 namespace SnakeTheClassicGameOnMVVM
 {
-    internal sealed class RandomLocationViewModel : IRandomLocationViewModel
+    internal sealed class RandomLocationViewModel : IRandomFoodLocationViewModel
     {
         #region Field
 

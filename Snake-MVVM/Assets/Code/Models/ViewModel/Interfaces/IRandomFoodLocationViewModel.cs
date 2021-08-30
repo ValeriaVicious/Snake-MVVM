@@ -3,7 +3,7 @@
 
 namespace SnakeTheClassicGameOnMVVM
 {
-    internal interface IRandomLocationViewModel
+    internal interface IRandomFoodLocationViewModel
     {
         public ILocationModel LocationModel { get; }
         public void ChangeTheLocation();
