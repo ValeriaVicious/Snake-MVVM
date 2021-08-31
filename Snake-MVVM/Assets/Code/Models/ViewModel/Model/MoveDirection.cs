@@ -2,7 +2,7 @@
 
 namespace SnakeTheClassicGameOnMVVM
 {
-    internal enum MoveDirection
+    public enum MoveDirection
     {
         None = 0,
         Right = 1,
