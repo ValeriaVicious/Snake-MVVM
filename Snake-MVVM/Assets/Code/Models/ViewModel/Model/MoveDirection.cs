@@ -2,12 +2,12 @@
 
 namespace SnakeTheClassicGameOnMVVM
 {
-    public enum MoveDirection
+    internal enum MoveDirection
     {
         None = 0,
-        Right = 1,
-        Left = 2,
-        Up = 3,
-        Down = 4,
+        Up = 1,
+        Down = 2,
+        Left = 3,
+        Right = 4
     }
 }

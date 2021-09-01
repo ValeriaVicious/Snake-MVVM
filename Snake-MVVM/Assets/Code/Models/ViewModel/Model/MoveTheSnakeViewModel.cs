@@ -14,8 +14,7 @@ namespace SnakeTheClassicGameOnMVVM
 
         #region ClassLifeCycles
 
-        public MoveTheSnakeViewModel(ILocationViewModel headOfSnakeLocation,
-            IContainerLocation snakeContainer)
+        public MoveTheSnakeViewModel(IContainerLocation snakeContainer, ILocationViewModel headOfSnakeLocation)
         {
             _headOfSnakeLocation = headOfSnakeLocation;
             _snakeContainer = snakeContainer;
@@ -38,13 +37,13 @@ namespace SnakeTheClassicGameOnMVVM
             var previousX = headOfSnakeLocation.PreviousCoordinateX;
             var previousY = headOfSnakeLocation.PreviousCoordinateY;
 
-            foreach (var segment in _snakeContainer)
+            foreach (ILocationViewModel segment in _snakeContainer)
             {
                 if (segment != _snakeContainer.First())
                 {
                     var previousBufferX = segment.LocationModel.X;
                     var previousBufferY = segment.LocationModel.Y;
-                    segment.MoveTheSnake(previousX, previousBufferY);
+                    segment.MoveTheSnake(previousX, previousY);
                     previousX = previousBufferX;
                     previousY = previousBufferY;
                 }

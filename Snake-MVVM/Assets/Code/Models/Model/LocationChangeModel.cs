@@ -19,7 +19,7 @@ namespace SnakeTheClassicGameOnMVVM
 
         #region ClassLifeCycles
 
-        public LocationChangeModel(float previousY, float previousX, float currentY, float currentX)
+        public LocationChangeModel(float previousX, float previousY, float currentX, float currentY)
         {
             PreviousCoordinateY = previousY;
             PreviousCoordinateX = previousX;

@@ -47,17 +47,17 @@ namespace SnakeTheClassicGameOnMVVM
             {
                 case MoveDirection.None:
                     break;
-                case MoveDirection.Right:
-                    LocationModel.X++;
-                    break;
-                case MoveDirection.Left:
-                    LocationModel.X--;
-                    break;
                 case MoveDirection.Up:
                     LocationModel.Y++;
                     break;
                 case MoveDirection.Down:
                     LocationModel.Y--;
+                    break;
+                case MoveDirection.Left:
+                    LocationModel.X--;
+                    break;
+                case MoveDirection.Right:
+                    LocationModel.X++;
                     break;
                 default:
                     break;

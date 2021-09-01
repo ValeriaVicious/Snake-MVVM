@@ -39,14 +39,6 @@ namespace SnakeTheClassicGameOnMVVM
 
         private void InputGetMove()
         {
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                _lastMoveDirection = MoveDirection.Right;
-            }
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                _lastMoveDirection = MoveDirection.Left;
-            }
             if (Input.GetKey(KeyCode.UpArrow))
             {
                 _lastMoveDirection = MoveDirection.Up;
@@ -54,6 +46,14 @@ namespace SnakeTheClassicGameOnMVVM
             if (Input.GetKey(KeyCode.DownArrow))
             {
                 _lastMoveDirection = MoveDirection.Down;
+            }
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                _lastMoveDirection = MoveDirection.Left;
+            }
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                _lastMoveDirection = MoveDirection.Right;
             }
         }
 

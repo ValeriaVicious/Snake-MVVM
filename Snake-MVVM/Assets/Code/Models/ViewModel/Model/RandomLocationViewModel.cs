@@ -15,7 +15,7 @@ namespace SnakeTheClassicGameOnMVVM
 
         #region Properties
 
-        public ILocationModel LocationModel { get; set; }
+        public ILocationModel LocationModel { get; }
 
         #endregion
 
